@@ -7,10 +7,34 @@ I configured two GitLab runners:
 - A runner on an AWS EC2 Linux instance
 
 
-## Windows Local Runner Setup
-1. Downloaded and installed GitLab Runner for Windows
-2. Registered my runner using the shell executor
+## Windows Local Runner Setup - https://docs.gitlab.com/runner/install/windows/
+1. Created a folder called `GitLab-Runner` on my `C:\` drive.
+
+![c-drive](https://github.com/Princeton45/local-aws-runner/blob/main/images/c-drive.png)
+
+2. Downloaded the 64-bit binary which contains the gitlab-runner.exe and moved it to the folder called `GitLab-Runner` on my `C:\` drive.
+
+![exe](https://github.com/Princeton45/local-aws-runner/blob/main/images/exe.png)
+
+3. Ran the below commands in Powershell in the GitLab-Runner folder to install, start, and check the status of the runner:
+
+`.\gitlab-runner install`
+`.\gitlab-runner start`
+`.\gitlab-runner status`
+
+![install-runner](https://github.com/Princeton45/local-aws-runner/blob/main/images/install-runner.png)
+
+
+2. Registered the runner with my GitLab instance (gitlab.com)
+
+I used the `.\gitlab-runner register` command and provided the required information:
+
+![register](https://github.com/Princeton45/local-aws-runner/blob/main/images/register.png)
+
 3. Verified my runner appears in GitLab's runner list
+
+![verify-runner](https://github.com/Princeton45/local-aws-runner/blob/main/images/verify-runner.png)
+
 
 ![Windows Runner Registration](images/windows-runner.png)
 
