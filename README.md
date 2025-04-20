@@ -36,27 +36,9 @@ I used the `.\gitlab-runner register` command and provided the required informat
 ![verify-runner](https://github.com/Princeton45/local-aws-runner/blob/main/images/verify-runner.png)
 
 
-![Windows Runner Registration](images/windows-runner.png)
-
 ## ☁️ AWS EC2 Runner Setup
 1. Created an EC2 instance using Ubuntu AMI
 2. Installed and configured GitLab Runner using Docker executor
 3. Successfully registered the runner with my GitLab instance
 
 ![EC2 Runner Status](images/ec2-runner.png)
-
-## 🛠️ Configuration Details
-### Windows Runner
-```toml
-concurrent = 1
-check_interval = 0
-
-[session_server]
-  session_timeout = 1800
-
-[[runners]]
-  name = "windows-runner"
-  url = "https://gitlab.com/"
-  token = "XXXXXXXXXXXX"
-  executor = "shell"
-  shell = "powershell"
