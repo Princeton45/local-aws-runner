@@ -38,7 +38,17 @@ I used the `.\gitlab-runner register` command and provided the required informat
 
 ## ☁️ AWS EC2 Runner Setup
 1. Created an EC2 instance using Ubuntu AMI
+
+![ubuntu](https://github.com/Princeton45/local-aws-runner/blob/main/images/ubuntu.png)
+
 2. Installed and configured GitLab Runner using Docker executor
+
+Followed the steps - https://docs.gitlab.com/runner/install/linux-repository/
+
+![gitlab-linux](https://github.com/Princeton45/local-aws-runner/blob/main/images/gitlab-linux.png)
+
 3. Successfully registered the runner with my GitLab instance
 
-![EC2 Runner Status](images/ec2-runner.png)
+![registered](https://github.com/Princeton45/local-aws-runner/blob/main/images/registered2.png)
+
+![registered](https://github.com/Princeton45/local-aws-runner/blob/main/images/registered3.png)
